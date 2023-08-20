@@ -1,6 +1,8 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { RecoilRoot } from "recoil";
 import HeaderLayout from "./layout/HeaderLayout";
 import Home from "./components/Home";
+import Products from "./components/Products";
 
 const router = createBrowserRouter([
   {
@@ -21,7 +23,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/products",
-        element: "product",
+        element: <Products />,
       },
     ],
   },
@@ -29,9 +31,9 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <>
+    <RecoilRoot>
       <RouterProvider router={router} />
-    </>
+    </RecoilRoot>
   );
 }
 
