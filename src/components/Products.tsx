@@ -14,7 +14,9 @@ const Products = () => {
           {data.map((data: grupData) => {
             return (
               <NavLink to={data.linkGrup} style={style.box}>
-                <img src={data.srcLogo} style={style.gruopLogo} />
+                <div style={style.grupLogoWrapper}>
+                  <img src={data.srcLogo} style={style.gruopLogo} />
+                </div>
                 <p style={style.grupName}>{data.title}</p>
               </NavLink>
             );
@@ -54,22 +56,31 @@ const style: CSSProperties = {
     width: "250px",
     height: "350px",
     borderRadius: "15px",
-    backgroundColor: "rgb(215, 237, 146)",
+    backgroundColor: "rgb(138, 194, 217)",
     margin: "10px",
   },
   gruopLogo: {
-    height: "250px",
-    widows: "250px",
+    height: "200px",
+    widows: "200px",
+    filter: "invert(1)",
+    justifyContent: "center",
+    marginTop: "25px",
   },
   grupName: {
     borderRadius: "15px",
     height: "100px",
-    backgroundColor: "rgb(153, 217, 139)",
+    backgroundColor: "rgb(1, 71, 124)",
     width: "250px",
     fontSize: "30px",
     margin: "0",
     textAlign: "center",
     alignItems: "center",
+    color: "white",
+    lineHeight: "100px",
+  },
+  grupLogoWrapper: {
+    height: "250px",
+    widows: "250px",
   },
 };
 

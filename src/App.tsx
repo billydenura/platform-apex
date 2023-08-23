@@ -3,6 +3,8 @@ import { RecoilRoot } from "recoil";
 import HeaderLayout from "./layout/HeaderLayout";
 import Home from "./components/Home";
 import Products from "./components/Products";
+import About from "./components/About";
+import Contoh from "./components/pageKelompok/Contoh";
 
 const router = createBrowserRouter([
   {
@@ -15,7 +17,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/about-us",
-        element: "about us",
+        element: <About />,
       },
       {
         path: "/find-us",
@@ -24,6 +26,10 @@ const router = createBrowserRouter([
       {
         path: "/products",
         element: <Products />,
+      },
+      {
+        path: "/kelompok-contoh",
+        element: <Contoh />,
       },
     ],
   },

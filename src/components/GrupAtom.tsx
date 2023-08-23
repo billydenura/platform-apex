@@ -1,6 +1,6 @@
 import { atom } from "recoil";
 import { grupData } from "../types";
-import logo1 from "../assets/react.svg";
+import logo1 from "../assets/instagram.svg";
 
 export const GrupAtom = atom<grupData[]>({
   key: "data",
@@ -8,7 +8,7 @@ export const GrupAtom = atom<grupData[]>({
     {
       title: "Kelompok 1",
       srcLogo: logo1,
-      linkGrup: "/products/kel1",
+      linkGrup: "/kelompok-contoh",
     },
     {
       title: "kel2",
